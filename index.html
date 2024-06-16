@@ -1,14 +1,195 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>testproject</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Codejooyan</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="css/stayle.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
 <body>
-    <h1>hello world!</h1>
+
+
+    <div class="blackhole-video">
+        <video autoplay loop muted playsinline>
+            <source src="img/blackhole.webm" type="video/webm">
+        </video>
+    </div>
+
+
+
+    <canvas id="starfield"></canvas>
+
+
+    <nav>
+        <div class="nav-wrapper">
+            <div class="logo">
+                <img src="img/codejooyan4.png" alt="Codejooyan Logo">
+            </div>
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home icon-home"></i>صفحه اصلی</a></li>
+                <li><a href="shop.html"><i class="fas fa-shopping-cart icon-shop"></i>فروشگاه</a></li>
+                <li><a href="blog.html"><i class="fas fa-blog icon-blog"></i>وبلاگ</a></li>
+                <li><a href="about.html"><i class="fas fa-info icon-about"></i>درباره ما</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope icon-contact"></i>تماس با ما</a></li>
+            </ul>
+            <button href="#" id="loginLink" class="login_click light login-btn" data-toggle="modal"
+                data-target="#login">ورود/ثبت نام</button>
+
+        </div>
+    </nav>
+
+    <div class="main-container">
+        <div class="image">
+            <img src="img/mainIcons.webp" alt="Main Icons">
+        </div>
+        <div class="content">
+            <h1> وبسایت&nbsp<span class="rgb-text">کدجویان </span> </h1>
+            <p>کدجویان، یک پلتفرم آموزشی مدرن و جامع در زمینه برنامه‌نویسی است که با هدف توانمندسازی و ارتقای سطح دانش
+                برنامه‌نویسان، از مبتدی تا حرفه‌ای، طراحی شده است. در کدجویان، ما به این باوریم که یادگیری برنامه‌نویسی
+                باید به صورت عملی، جذاب و دسترسی‌پذیر باشد. به همین دلیل، دوره‌ها و محتوای آموزشی ما را به گونه‌ای طراحی
+                کرده‌ایم که هر فردی با هر سطح دانشی بتواند به راحتی وارد دنیای برنامه‌نویسی شود و مهارت‌های خود را توسعه
+                دهد.</p>
+            <!-- دیگر المان‌های محتوایی مورد نظر شما -->
+            <button href="about.html" class="main-btn">...ادامه </button>
+        </div>
+
+    </div>
+
+    <!-- بخش ویدیو با نوشته‌ها و آیکون‌ها -->
+    <div class="video-container">
+        <video autoplay loop muted playsinline class="cards-video">
+            <source src="img/cards-video.webm" type="video/webm">
+            Your browser does not support the video tag.
+        </video>
+
+        <div class="overlay-texts-icons">
+            <!-- متن‌ها و آیکون‌ها را اینجا قرار دهید -->
+            <h1>شروع یادگیری</h1>
+            <p>دنیای بی پایان آموزش در کدجویان...</p>
+            <!-- آیکون‌ها -->
+            <div class="pyramid">
+                <div class="row row1">
+                    <img src="img/html.png" alt="HTML">
+                    <img src="img/css.png" alt="CSS">
+                    <img src="img/js.png" alt="JavaScript">
+                    <img src="img/mysql.png" alt="MySQL">
+                    <img src="img/mui.png" alt="JavaScript">
+                    <img src="img/node-js.png" alt="Node.js">
+                    <img src="img/Firebase.png" alt="Firebase">
+                    <img src="img/express.png" alt="Node.js">
+                    <img src="img/redux.png" alt="redux">
+                    <img src="img/framer.png" alt="VS Code">
+                    <img src="img/wordpress.png" alt="wordpress">
+                    <img src="img/5968672.png" alt="VS Code">
+                    <img src="img/free-jquery-8-1175153.png" alt="wordpress">
+
+                </div>
+                <div class="row row2">
+                    <img src="img/html.png" alt="HTML">
+                    <img src="img/css.png" alt="CSS">
+                    <img src="img/js.png" alt="JavaScript">
+                    <img src="img/mysql.png" alt="MySQL">
+                    <img src="img/wordpress.png" alt="wordpress">
+                    <img src="img/node-js.png" alt="Node.js">
+                    <img src="img/Firebase.png" alt="Firebase">
+                    <img src="img/free-jquery-8-1175153.png" alt="wordpress">
+                    <img src="img/redux.png" alt="redux">
+                    <img src="img/visual-studio-code.png" alt="VS Code">
+                </div>
+                <div class="row row3">
+                    <img src="img/go.png" alt="Go">
+                    <img src="img/framer.png" alt="VS Code">
+                    <img src="img/mui.png" alt="JavaScript">
+                    <img src="img/5968672.png" alt="VS Code">
+                    <img src="img/graphql.png" alt="Go">
+                    <img src="img/reactquery.png" alt="Go">
+                    <img src="img/postger.png" alt="Go">
+                    <img src="img/figma.png" alt="Figma">
+
+                </div>
+                <div class="row row4">
+                    <img src="img/next.png" alt="Next.js">
+                    <img src="img/react.png" alt="React">
+                    <img src="img/dotnet.png" alt=".NET">
+                    <img src="img/go.png" alt="Go">
+                </div>
+                <div class="row row5">
+                    <img src="img/icon.png" alt="C#">
+                </div>
+            </div>
+
+            <!-- ... سایر آیکون‌ها ... -->
+        </div>
+    </div>
+    </div>
+
+
+    <!-- Log In Modal -->
+    <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="registermodal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered login-pop-form" role="document">
+            <div class="modal-content" id="registermodal">
+                <span class="mod-close" data-dismiss="modal" aria-hidden="true"><i class="ti-close"></i></span>
+                <div class="modal-body">
+                    <h4 class="modal-header-title">ورود به حساب</h4>
+                    <div class="login-form">
+                        <form>
+
+                            <div class="form-group">
+                                <label>نام کاربری</label><br>
+                                <input type="text" class="form-control" placeholder="نام کاربری">
+                            </div>
+
+                            <div class="form-group">
+                                <label>رمز عبور</label><br>
+                                <input type="password" class="form-control" placeholder="*******">
+                            </div>
+
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-md full-width pop-login">ورود به حساب</button>
+                            </div>
+
+                        </form>
+                    </div>
+
+                    <div class="social-login mb-3">
+                        <ul class="ul-box">
+                            <li>
+                                <input id="reg" class="checkbox-custom" name="reg" type="checkbox">
+                                <label for="reg" class="checkbox-custom-label">ذخیره رمزعبور</label>
+                            </li>
+                            <li class="left"><a href="#" class="theme-cl li-box">رمز عبور خود را فراموش کرده اید؟</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="modal-divider"><span>یـا</span></div>
+                    <div class="social-login ntr mb-3">
+                        <ul>
+                            <li><a href="#" class="btn connect-fb google-fb"><i class="ti-facebook"></i>Facebook</a>
+                            </li>
+                            <li><a href="#" class="btn connect-google google-fb"><i class="ti-google"></i>Google</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="text-center">
+                        <p class="mt-2">حساب کاربری ندارید؟ <a href="register.html" class="link">ساخت حساب</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Modal -->
+    <script src="js/sctipt.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
 </body>
 
 </html>

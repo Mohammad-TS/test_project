@@ -1,0 +1,597 @@
+/* اضافه کردن فونت فارسی */
+
+@import url('https://fonts.googleapis.com/css2?family=Vazir&display=swap');
+
+/* تنظیمات اولیه و ریست CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    height: 100%;
+    font-family: 'Vazir', sans-serif;
+    color: white;
+    background-color: #070016;
+    background-image: url('img/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+/* تنظیمات عمومی لینک‌ها */
+a {
+    color: inherit;
+    text-decoration: none !important;
+}
+
+/* استایل بخش ویدیوی سیاه‌چاله */
+.blackhole-video {
+    position: relative;
+    height: 55vh;
+    overflow: hidden;
+    z-index: 0;
+}
+
+
+.blackhole-video video {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    transform: rotate(180deg);
+}
+
+/* استایل ناوبری */
+nav .nav-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    /* موارد منو در سمت راست قرار گیرند */
+    align-items: center;
+    background-color: rgba(3, 0, 20, 0.3);
+    /* پس‌زمینه محوتر */
+    backdrop-filter: blur(5px);
+    position: absolute;
+    width: 100%;
+    top: 0;
+    padding: 10px 20px;
+}
+
+/* استایل لوگو */
+nav .logo {
+    margin-left: 20px;
+    order: 2;
+    /* لوگو در سمت راست قرار گیرد */
+}
+
+/* استایل لیست منو */
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    order: 1;
+}
+
+/* استایل آیتم‌های منو */
+nav ul li {
+    margin-left: 20px;
+    position: relative;
+    /* برای قرارگیری ایکون‌ها */
+}
+
+/* استایل لینک‌های منو */
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    /* تراز کردن ایکون‌ها و متن */
+}
+
+/* افکت هاور برای لینک‌ها */
+nav ul li a:hover {
+    color: #0db1d5;
+    transition: color 0.3s ease-in-out;
+}
+
+/* استایل دکمه ورود/ثبت نام */
+.login-btn {
+    padding: 10px 20px;
+    background: linear-gradient(to right, #975ff3, #0db1d5);
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 20px;
+    /* دکمه گرد شود */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* افزودن سایه */
+    margin-right: auto;
+    /* فاصله از سمت چپ */
+    order: 3;
+    /* دکمه در سمت چپ قرار می‌گیرد */
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    /* انیمیشن برای هاور */
+    order: -1;
+    font-family: 'Vazir', sans-serif;
+}
+
+/* افکت هاور برای دکمه */
+.login-btn:hover {
+    background-color: #0db1d5;
+    /* تغییر رنگ پس‌زمینه دکمه */
+    transform: scale(1.05);
+    /* کمی بزرگتر شود */
+}
+
+/* استایل آیکون‌های منو */
+.icon-home,
+.icon-shop,
+.icon-blog,
+.icon-about,
+.icon-contact {
+    margin-right: 5px;
+    /* فاصله آیکون از متن */
+}
+
+/* استایل آیتم‌های منو برای نمایش آیکون کنار متن */
+nav ul li a {
+    display: flex;
+    align-items: center;
+}
+
+/* افزودن فاصله بین آیتم‌های منو و همچنین بین آیکون و متن */
+nav ul li {
+    padding: 0 15px;
+}
+
+nav ul li a .icon {
+    display: inline-block;
+
+}
+
+/* استایل برای متن لینک‌ها هنگام هاور */
+nav ul li a span {
+    transition: color 0.3s ease-in-out;
+}
+
+/* تغییر رنگ متن لینک‌ها هنگام هاور */
+nav ul li a:hover span {
+    color: #0db1d5;
+}
+
+/* اصلاح سایز لوگو */
+nav .logo img {
+    height: auto;
+    /* برای حفظ نسبت‌های تصویر */
+    width: 80px;
+    /* یا هر اندازه دیگری که مناسب باشد */
+    order: 1;
+    /* لوگو در انتها قرار می‌گیرد در حالت RTL */
+}
+
+/* اصلاح موقعیت دکمه ثبت نام و متن‌ها */
+nav .nav-wrapper {
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    /* برای چیدمان در جهت راست به چپ */
+}
+
+
+/* اصلاح جهت نوشتاری متن‌های منو */
+nav {
+    direction: rtl;
+    /* تنظیم جهت نوشتاری به راست به چپ */
+
+}
+
+nav ul {
+    padding-inline-start: 0;
+    /* حذف پدینگ پیش‌فرض در حالت RTL */
+}
+
+nav ul li {
+    margin-left: 0;
+    /* حذف margin-left که برای LTR اضافه شده بود */
+    margin-right: 20px;
+    /* اضافه کردن فاصله در حالت RTL */
+}
+
+/* اضافه کردن به style.css */
+
+/* تنظیمات برای منوبار */
+.nav-wrapper {
+    position: relative;
+    /* یا absolute بسته به نیاز شما */
+    z-index: 2;
+}
+
+/* اطمینان از اینکه کانواس ستاره‌ها زیر منوبار قرار دارد */
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+}
+
+.main-container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    margin-top: -9rem;
+    margin-bottom: 2rem;
+    z-index: 1;
+}
+
+.content {
+    flex-basis: 50%;
+    /* تعیین عرض تقریبی برای دیو محتوا */
+    text-align: right;
+
+}
+
+.rgb-text {
+    background: linear-gradient(90deg, #975ff3, #0db1d5);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    /* سازگاری با بیشتر مرورگرها */
+    -webkit-text-fill-color: transparent;
+    /* اختیاری، برای Safari */
+}
+
+
+
+.image {
+    flex-basis: 50%;
+    /* تعیین عرض تقریبی برای دیو تصویر */
+    display: flex;
+    justify-content: center;
+    /* تصویر را در مرکز دیو قرار می‌دهد */
+    align-items: center;
+    /* تصویر را در وسط دیو از نظر عمودی قرار می‌دهد */
+}
+
+.image img {
+    max-width: 100%;
+    /* اطمینان از اینکه تصویر از دیو خارج نمی‌شود */
+    height: 400px;
+    /* حفظ نسبت‌های تصویر */
+    width: 400px;
+    color: rgb(255, 255, 255);
+
+}
+
+.main-btn {
+    background: linear-gradient(180deg, rgba(60, 8, 126, 0) 0%, rgba(60, 8, 126, 0.32) 100%), rgba(113, 47, 255, 0.12);
+    box-shadow: inset 0 0 12px #bf97ff3d;
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 20px;
+    /* دکمه گرد شود */
+    font-family: 'Vazir', sans-serif;
+    margin-top: 10px;
+}
+
+.main-btn:hover {
+    transform: scale(1.05);
+}
+
+.modal {
+    display: none;
+    /* پنهان کردن مودال به صورت پیش‌فرض */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.modal-dialog {
+    direction: rtl;
+    text-align: right;
+    background: linear-gradient(to left, #0f0c29, #302b63, #24243e);
+    border-radius: 5px;
+    padding: 20px;
+    width: 500px;
+    /* تنظیم عرض مودال */
+    max-width: 600px;
+    /* حداکثر عرض مودال */
+    margin: 10vh auto auto auto;
+    animation: modalFade 0.5s;
+    /* 
+}
+
+.modal-content {
+    width: 100%;
+    background: none; /* حذف پس‌زمینه پیش‌فرض */
+    border: none;
+    /* حذف حاشیه پیش‌فرض */
+}
+
+.modal-header-title {
+    color: #fff;
+    /* رنگ متن سرفصل مودال */
+    margin-bottom: 30px;
+    /* فاصله پایین سرفصل */
+    text-align: center;
+    /* تراز متن به مرکز */
+    font-family: 'Vazir', sans-serif;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    /* فاصله بین فیلدها */
+}
+
+.form-group label {
+    color: #fff;
+    /* رنگ برچسب‌های فرم */
+    margin-bottom: 5px;
+    /* فاصله پایین برچسب‌ها */
+    display: block;
+    /* اطمینان از اینکه برچسب‌ها قبل از فیلدها قرار می‌گیرند */
+    font-family: 'Vazir', sans-serif;
+}
+
+.form-control {
+    border: none;
+    /* حذف حاشیه پیش‌فرض */
+    border-radius: 4px;
+    /* دور گرد کردن گوشه‌های فیلدها */
+    padding: 10px;
+    /* فاصله داخلی فیلدها */
+    margin-bottom: 20px;
+    /* فاصله پایین فیلدها */
+    width: 100%;
+}
+
+.btn {
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    margin-top: 10px;
+    /* فاصله بالای دکمه‌ها */
+    cursor: pointer;
+    width: 100%;
+    /* پر کردن عرض دکمه */
+}
+
+/* دکمه‌های ورود به حساب و شبکه‌های اجتماعی */
+.pop-login {
+    background: linear-gradient(to right, #975ff3, #0db1d5);
+    color: #fff;
+    /* رنگ متن دکمه */
+    font-family: 'Vazir', sans-serif;
+}
+
+.connect-fb {
+    background-color: #3B5998;
+    /* رنگ دکمه فیسبوک */
+    color: #fff;
+    margin-bottom: 10px;
+    /* فاصله پایین دکمه فیسبوک */
+}
+
+.connect-google {
+    background-color: #DD4B39;
+    /* رنگ دکمه گوگل */
+    color: #fff;
+}
+
+.checkbox-custom {
+    vertical-align: middle;
+}
+
+.checkbox-custom-label {
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 5px;
+    color: #fff;
+}
+
+/* تنظیمات برای لینک‌های داخل مودال */
+.modal-body a {
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    /* برای اعمال فاصله و margin */
+    margin-right: 10px;
+    /* فاصله بین لینک‌ها */
+}
+
+.modal-body a:hover {
+    text-decoration: underline;
+}
+
+/* تنظیم فاصله بین بخش‌های مختلف مودال */
+.modal-divider {
+    border-top: 1px solid #fff;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    line-height: 0;
+    position: relative;
+}
+
+.modal-divider span {
+    padding: 0 10px;
+    position: relative;
+    top: -10px;
+    /* بالا بردن نسبت به خط */
+}
+
+/* تنظیمات انیمیشن برای باز شدن مودال */
+@keyframes modalFadeIn {
+    from {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* اعمال انیمیشن به مودال */
+.modal-dialog {
+    animation-name: modalFadeIn;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+}
+
+.ul-box {
+    text-align: center;
+}
+
+.google-fb {
+    text-align: center;
+}
+
+/* استایل دکمه‌ها با منحنی‌های نرم‌تر */
+.btn {
+    border-radius: 20px;
+}
+
+li {
+    list-style: none;
+}
+
+.mt-2 {
+    text-align: center;
+}
+
+.li-box {
+    margin: 10px auto !important;
+}
+
+@keyframes moveBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.modal-dialog {
+    /* ... سایر استایل‌های شما ... */
+    background: linear-gradient(to left, #0f0c29, #302b63, #24243e);
+    background-size: 200% 200%;
+    /* دو برابر کردن اندازه پس‌زمینه برای اجازه جریان */
+    animation: moveBackground 10s ease infinite;
+    /* اجرای نامحدود انیمیشن */
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    max-height: 100vh;
+    /* ارتفاع ویدیو را محدود می‌کند تا از صفحه نمایش بیشتر نشود */
+    overflow: hidden;
+    /* اطمینان حاصل می‌کند که هر بخشی از ویدیو که از کانتینر بزرگتر باشد، مخفی شود */
+}
+
+.cards-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* ویدیو را به نحوی تنظیم می‌کند تا به خوبی در کانتینر جا شود */
+}
+
+.overlay-texts-icons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    /* رنگ متن‌ها به سفید تغییر می‌کند تا روی ویدیو قابل مشاهده باشد */
+    text-align: center;
+    /* متن‌ها در مرکز قرار می‌گیرند */
+    background-color: rgba(3, 0, 20, 0.3);
+    /* افزودن یک لایه نیمه شفاف روی ویدیو برای خوانایی بهتر متن */
+}
+
+.icons {
+    margin-top: 20px;
+    /* فاصله بین متن و آیکون‌ها */
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    /* فاصله بین آیکون‌ها */
+}
+
+.icon {
+    display: inline-block;
+    /* فرض بر اینکه از فونت آیکون استفاده می‌کنید، می‌توانید سایز و رنگ آیکون‌ها را اینجا تنظیم کنید */
+    font-size: 24px;
+    color: #fff;
+}
+
+.pyramid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    /* یا هر عرض دیگری که مد نظر دارید */
+    max-width: 1200px;
+    /* تنظیم عرض حداکثر برای جلوگیری از شدن خیلی بزرگ */
+
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    /* فاصله بین تصاویر */
+    margin-bottom: 50px;
+    /* فاصله بین ردیف‌ها */
+    width: 100%;
+    /* یا هر عرض دیگری که مد نظر دارید */
+    max-width: 1200px;
+    /* تنظیم عرض حداکثر برای جلوگیری از شدن خیلی بزرگ */
+    margin: auto;
+    /* برای قرارگیری باکس در مرکز */
+    flex-wrap: wrap;
+    /* در صورت لزوم می‌توانید از این خصوصیت برای شکستن ردیف‌ها استفاده کنید */
+}
+
+.row img {
+    width: 50px;
+    /* افزایش اندازه تصاویر */
+    height: auto;
+    /* حفظ نسبت ابعاد تصاویر */
+    margin: 10px;
+    /* اضافه کردن فاصله بین تصاویر */
+}
+
+.row1 {
+    padding: auto 30px;
+}
+
+.row2 {
+    margin: auto 100px;
+}
